@@ -37,7 +37,7 @@ Opens the current branch's Pull Request in your browser. If no PR exists, it ope
 
 Example mapping:
 ```lua
-vim.keymap.set("n", "<leader>gho", require("go-to-pr").open_pr, { desc = "Open/Create PR" })
+vim.keymap.set("n", "<leader>gho", function() require("go-to-pr").open_pr end, { desc = "Open/Create PR" })
 ```
 
 ### `require("go-to-pr").blame_pr()`
@@ -46,7 +46,7 @@ Finds and opens the Pull Request that introduced the code at your cursor positio
 
 Example mapping:
 ```lua
-vim.keymap.set("n", "<leader>ghb", require("go-to-pr").blame_pr, { desc = "Blame PR" })
+vim.keymap.set("n", "<leader>ghb", function() require("go-to-pr").blame_pr end, { desc = "Blame PR" })
 ```
 
 ## License
